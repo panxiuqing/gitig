@@ -2,14 +2,16 @@ name: Release
 
 on:
   push:
-    branches: [main]
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
       - name: Set up Go
         uses: actions/setup-go@v2
@@ -18,3 +20,10 @@ jobs:
 
       - name: Build
         run: go build
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: gitig
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
