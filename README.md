@@ -1,4 +1,4 @@
-# Gitig
+<img src="./gitig.svg" width="200px">
 
 Simple command line tool to init gitignore file.
 
