@@ -4,7 +4,7 @@ Simple command line tool to init gitignore file.
 
 ## Usage
 
-Download executable target file from Releases and add put it to your PATH, then:
+Download executable target file from Releases and put it to your $PATH, then:
 
 ```sh
 # Create .gitignore file for Python project to current position
